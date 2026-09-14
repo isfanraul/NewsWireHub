@@ -15,7 +15,7 @@ news outlet.
 
 - [Overview](#overview)
 - [Project structure](#project-structure)
-- [Tech stack (2026)](#tech-stack-2026)
+- [Tech stack](#tech-stack)
 - [Architecture](#architecture)
 - [Multi-source sitemap configuration](#multi-source-sitemap-configuration)
 - [Getting started](#getting-started)
@@ -58,7 +58,7 @@ NewsWireHub/
 └── docker-compose.yml  Local orchestration of db + api + ui
 ```
 
-## Tech stack (2026)
+## Tech stack
 
 | Layer      | Technology                                              |
 |------------|----------------------------------------------------------|
