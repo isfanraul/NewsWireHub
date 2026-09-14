@@ -1,0 +1,58 @@
+<div class="search-container">
+  <mat-form-field appearance="outline" class="search-input">
+    <input matInput [(ngModel)]="searchQuery.loc" placeholder="Search by URL">
+  </mat-form-field>
+
+  <button mat-icon-button class="search-button" (click)="searchArticles()">
+    <mat-icon>search</mat-icon>
+  </button>
+</div>
+<div class="search-results" *ngIf="searchResults.length > 0">
+  <h3 class="search-results-heading">Search Results</h3>
+  <mat-card *ngFor="let article of searchResults" class="search-result-card">
+    <mat-card-header>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="details-row">
+        <div class="details-value">
+          <a class="ripple" href="#!">
+            <img
+              alt="example"
+              class="img-fluid rounded thumbnail-img"
+              [src]="article.thumbnail"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="details-row">
+        <div class="details-label">Description:</div>
+        <div class="details-value">{{ article.description }}</div>
+      </div>
+      <div class="details-row">
+        <div class="details-label">Last Modified:</div>
+        <div class="details-value">{{ formatDate(article.lastmod) }}</div>
+      </div>
+      <div class="details-row">
+        <div class="details-label">Article URL:</div>
+        <div class="details-value">{{ article.loc }}</div>
+      </div>
+      <div class="details-row">
+        <div class="details-label">Channel Name:</div>
+        <div class="details-value">{{ article.channelName }}</div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button class="link-button" (click)="openUrlInNewTab(article.loc)">
+        <mat-icon>link</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="no-results" *ngIf="searchResults.length === 0 && showNoResultsMessage">
+  <p>No results found.</p>
+</div>
+
+<div class="no-search" *ngIf="!searchQuery.loc && searchResults.length === 0">
+  <p>Please enter a search query.</p>
+</div>

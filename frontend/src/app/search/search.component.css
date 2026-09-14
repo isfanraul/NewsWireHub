@@ -1,0 +1,85 @@
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-right: 10px;
+  }
+
+  .search-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: -20px; 
+  }
+
+  .search-button .mat-icon {
+    font-size: 24px;
+    color: #2196f3;
+  }
+  
+  .search-results-heading {
+    font-size: 20px;
+    /* margin-bottom: 10px; */
+    font-weight: bold;
+    color: palevioletred;
+  }
+  
+  .search-result-card {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  .details-row {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .details-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .details-value {
+    flex-grow: 1;
+  }
+  
+  .no-results,
+  .no-search {
+    margin-bottom: 10px;
+  }
+  
+  .no-results p,
+  .no-search p {
+    font-style: italic;
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .link-button {
+    margin-top: 10px; 
+    color: primary;
+  }
+  
+  .search-result-card {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  

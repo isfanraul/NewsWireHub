@@ -1,0 +1,37 @@
+<mat-card *ngIf="article" class="search-result-card">
+  <mat-card-header>
+    <mat-card-title>{{ article.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="details-row">
+      <div class="details-value">
+        <a class="ripple" href="#!">
+          <img
+            alt="example"
+            class="img-fluid rounded thumbnail-img"
+            [src]="article.thumbnail"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="details-row">
+      <div class="details-label">Description:</div>
+      <div class="details-value">{{ article.description }}</div>
+    </div>
+    <div class="details-row">
+      <div class="details-label">Article URL:</div>
+      <div class="details-value">{{ article.loc }}</div>
+    </div>
+    <div class="details-row">
+      <div class="details-label">Channel Name:</div>
+      <div class="details-value">{{ article.channelName }}</div>
+    </div>
+    <div class="details-row">
+      <div class="details-label">Last Modified:</div>
+      <div class="details-value">{{ formattedDate }}</div>
+    </div>
+    <button mat-icon-button (click)="editArticle()">
+      <mat-icon class="button">edit</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>

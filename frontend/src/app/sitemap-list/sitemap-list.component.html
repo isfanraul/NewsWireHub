@@ -1,0 +1,37 @@
+<div class="sitemap-list">
+  <h2 class="sitemap-heading">Sitemaps</h2>
+
+  <div class="add-button-container">
+    <button mat-fab color="primary" class="add-sitemap-button" (click)="openAddSitemapDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <mat-list class="sitemap-items">
+    <mat-list-item class="sitemap-item" *ngFor="let sitemap of getCurrentPageSitemaps()">
+      <div class="sitemap-link">
+        <mat-icon class="sitemap-icon">rss_feed</mat-icon>
+        <div class="sitemap-details">
+          <span class="sitemap-channel">Channel: {{ sitemap.channel }}</span>
+          <span class="sitemap-loc">Link: {{ sitemap.loc }}</span>
+        </div>
+        <div class="sitemap-buttons-container">
+          <button mat-icon-button class="sitemap-button" (click)="navigateToUrlFromSitemap(sitemap.loc)">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+          <button mat-icon-button class="sitemap-button" (click)="openSitemapInNewTab(sitemap.loc)">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <button mat-icon-button class="sitemap-button" (click)="deleteSitemap(sitemap.loc)" *ngIf="isAdmin()">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+  <div class="pagination" *ngIf="channelSitemaps.length > pageSize">
+    <mat-paginator [length]="channelSitemaps.length" [pageSize]="pageSize" [pageSizeOptions]="[pageSize]"
+      (page)="onPageChange($event.pageIndex)"></mat-paginator>
+  </div>
+</div>

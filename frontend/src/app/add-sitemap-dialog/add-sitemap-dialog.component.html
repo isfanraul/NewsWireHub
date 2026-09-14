@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Add Sitemap</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="URL" [(ngModel)]="formData.loc" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Channel" [(ngModel)]="formData.channel" required>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="!isFormValid()" (click)="save()">Save</button>
+</mat-dialog-actions>
