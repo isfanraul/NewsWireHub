@@ -29,7 +29,6 @@ news outlet.
 - [CI/CD (Jenkins)](#cicd-jenkins)
 - [Infrastructure (Terraform / AWS)](#infrastructure-terraform--aws)
 - [Testing](#testing)
-- [2026 stack notes](#2026-stack-notes)
 
 ## Overview
 
@@ -242,19 +241,3 @@ cd frontend
 npm test
 ```
 
-## 2026 stack notes
-
-This project runs on a current, actively-maintained stack:
-
-- Single monorepo containing the backend, frontend, CI/CD pipeline, and infrastructure code.
-- Configurable, multi-source sitemap aggregation (BBC, Reuters, AP, NPR by default — fully
-  configurable, add or remove any news site without code changes).
-- Backend on **Spring Boot 3.3 / Java 21**, using `jakarta.*` namespaces, a modern
-  `SecurityFilterChain`-based security configuration, and `jjwt` 0.12 with the current `Jwts`
-  builder API. Uses `mysql-connector-j` and `springdoc-openapi` v2.
-- Frontend on **Angular 22**, using the modern `application` builder, with all related
-  dependencies (Angular Material, Karma/Jasmine, TypeScript, Prettier) kept current.
-- No hardcoded production endpoints — all environment-specific values (API URL, DB host, JWT
-  secret) are externalized via configuration.
-- Jenkins pipeline and Terraform infrastructure included for build, containerization, and AWS
-  deployment.
