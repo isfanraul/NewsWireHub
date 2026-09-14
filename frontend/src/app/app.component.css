@@ -1,0 +1,101 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.toolbar-icon {
+  margin-right: 2px;
+}
+
+.toolbar-text {
+  margin-left: 2px;
+}
+
+.menu_right {
+  margin-left: auto;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  margin-right: 4px;
+}
+
+.profile-logout-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
+.profile-icon {
+  margin-right: 2px;
+}
+
+.logout-button {
+  margin-left: 8px;
+}
+
+.logout-icon {
+  margin-right: 4px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(51, 51, 51, 0.14);
+}
+
+.sidebar a mat-icon {
+  margin-right: 6px;
+  color: #e91e63;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
+
+.app-footer {
+  margin-top: auto;
+}
+
+.sidebar .list-group-item.router-link-active .mat-icon + span {
+  font-size: 18px;
+}
+

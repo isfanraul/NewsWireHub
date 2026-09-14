@@ -1,0 +1,24 @@
+  .search-result-card {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  .details-row {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  
+  .details-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .details-value {
+    flex-grow: 1;
+  }
+  

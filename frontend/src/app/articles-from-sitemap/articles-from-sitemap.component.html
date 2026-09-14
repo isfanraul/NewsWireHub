@@ -1,0 +1,19 @@
+<div class="articles-from-sitemap">
+  <h2 class="articles-heading">URLs from Sitemap</h2>
+
+  <mat-card class="articles-card" *ngFor="let article of getCurrentPageArticles()">
+    <mat-card-header>
+      <div class="articles-details">
+        <mat-icon class="articles-icon" (click)="openUrlInNewTab(article.loc)">launch</mat-icon>
+        <div class="articles-info">
+          <span class="articles-loc">{{ article.loc }}</span>
+        </div>
+      </div>
+    </mat-card-header>
+  </mat-card>
+
+  <div class="pagination" *ngIf="articles.length > pageSize">
+    <mat-paginator [length]="articles.length" [pageSize]="pageSize" [pageSizeOptions]="[pageSize]"
+      (page)="onPageChange($event.pageIndex)"></mat-paginator>
+  </div>
+</div>

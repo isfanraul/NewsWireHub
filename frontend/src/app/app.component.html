@@ -1,0 +1,66 @@
+<div class="main-container">
+  <mat-toolbar color="primary">
+    <mat-icon routerLink="/home" class="toolbar-icon">web</mat-icon>
+    <span class="toolbar-text">NewsWireHub</span>
+
+    <span class="spacer"></span>
+
+    <div class="menu_right" *ngIf="!loggedUser">
+      <button mat-button routerLink="/authentication" class="menu-button" routerLinkActive="active">
+        <mat-icon class="menu-icon">lock</mat-icon>
+        <span>Authentication</span>
+      </button>
+    </div>
+
+    <div class="menu_right" *ngIf="loggedUser">
+      <div class="profile-logout-wrapper">
+        <a *ngIf="loggedUser" class="profile-link">
+          <mat-icon class="profile-icon">account_circle</mat-icon>
+          <span>{{ loggedUser.username }} ({{ loggedUser.role }})</span>
+        </a>
+        <a mat-button class="logout-button" routerLink="" routerLinkActive="active" (click)="logout()">
+          <mat-icon class="logout-icon">exit_to_app</mat-icon>
+          <span>Log out</span>
+        </a>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <div class="container">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white" *ngIf="isViewerOrEditorOrAdmin()">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3 mt-4">
+          <a mat-list-item routerLink="/home" routerLinkActive="active" class="waves-effect" *ngIf="isViewerOrEditorOrAdmin()">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </a>
+          <a mat-list-item routerLink="/dashboard" routerLinkActive="active" class="waves-effect" *ngIf="isViewerOrEditorOrAdmin()">
+            <mat-icon>dashboard</mat-icon>
+            <span>Dashboard</span>
+          </a>
+          <a mat-list-item routerLink="/sitemap-list" routerLinkActive="active" class="waves-effect" *ngIf="isAdmin()">
+            <mat-icon>rss_feed</mat-icon>
+            <span>Sitemaps</span>
+          </a>
+          <a mat-list-item routerLink="/search" routerLinkActive="active" class="waves-effect" *ngIf="isViewerOrEditorOrAdmin()">
+            <mat-icon>search</mat-icon>
+            <span>Search</span>
+          </a>
+          <a mat-list-item routerLink="/article-create" routerLinkActive="active" class="waves-effect" *ngIf="isEditorOrAdmin()">
+            <mat-icon>article</mat-icon>
+            <span >Add Article</span>
+          </a>
+          <a mat-list-item routerLink="/admin" routerLinkActive="active" class="waves-effect" *ngIf="isAdmin()">
+            <mat-icon>admin_panel_settings</mat-icon>
+            <span>Admin</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer class="app-footer"></app-footer>
+</div>

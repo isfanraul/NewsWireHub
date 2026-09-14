@@ -1,0 +1,61 @@
+   .auth-card {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+    border: 1px solid #E0E0E0;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .register-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-button {
+    margin-top: 40px;
+    min-width: 0;
+    padding: 8px;
+  }
+  
+  .success-message {
+    color: pink;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: #c62828;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .account-message {
+    color: primary;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .account-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #1976d2;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .account-link:hover {
+    text-decoration: underline;
+  }
+  

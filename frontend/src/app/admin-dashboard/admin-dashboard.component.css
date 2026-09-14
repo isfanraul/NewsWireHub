@@ -1,0 +1,78 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.h2 {
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+mat-icon {
+  margin-right: 10px;
+  color: #333;
+  font-size: 24px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  color: #666;
+}
+
+.user-role {
+  color: #888;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.actions {
+  margin-left: auto;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.create-button {
+  font-weight: bold;
+  width: 100%;
+}

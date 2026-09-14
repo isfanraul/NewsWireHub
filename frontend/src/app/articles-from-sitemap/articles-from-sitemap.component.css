@@ -1,0 +1,41 @@
+.articles-from-sitemap {
+  margin: 20px;
+}
+
+.articles-heading {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.articles-card {
+  margin-bottom: 10px;
+}
+
+.articles-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles-icon {
+  margin-left: 2px;
+}
+
+.articles-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.articles-loc {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+}

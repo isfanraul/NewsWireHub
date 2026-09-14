@@ -1,0 +1,137 @@
+/* .edit-form {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding: 20px;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popup-title {
+  font-size: 24px;
+  color: palevioletred;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.form-field {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-label {
+  color: palevioletred;
+}
+
+.mat-input-element {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.mat-input-element:focus {
+  outline: none;
+  border-color: palevioletred;
+}
+
+.mat-hint {
+  font-size: 12px;
+  color: #888;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  background-color: palevioletred;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #508f3c;
+} */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popup-title {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-label {
+  color: palevioletred;
+}
+
+.mat-input-element {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.mat-input-element:focus {
+  outline: none;
+  border-color: palevioletred;
+}
+
+.mat-hint {
+  font-size: 12px;
+  color: #888;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: palevioletred;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #508f3c;
+}

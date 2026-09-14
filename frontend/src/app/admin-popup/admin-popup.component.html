@@ -1,0 +1,45 @@
+<mat-card class="auth-card">
+  <mat-card-content>
+    <div class="container">
+      <div class="register-item">
+        <div class="logo">Create new account</div>
+        <form [formGroup]="adminForm" (ngSubmit)="onSubmit()" class="form-register">
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Email:</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Username:</mat-label>
+            <input matInput formControlName="username">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Password:</mat-label>
+            <input matInput formControlName="password" required type="password">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="mat-form-field">
+            <mat-label>Role:</mat-label>
+            <mat-select formControlName="role">
+              <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="mat-form-field">
+            <button mat-icon-button color="primary" class="register-button">
+              <mat-icon>person_add</mat-icon>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="success-message" *ngIf="isSuccessful">
+      Registered successfully!
+    </div>
+    <div class="error-message" *ngIf="!isSuccessful && isSignUpFailed">
+      Registration failed!
+    </div>
+  </mat-card-content>
+</mat-card>
